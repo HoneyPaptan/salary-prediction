@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Prediction</title>
+    <!-- //fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Include jQuery before Select2 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Salary Prediction</h1>
+        <form id="predictionForm">
+            <div class="input-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="input-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="degree">Degree:</label>
+                <select id="degree" name="degree" required>
+                    <option value="Bachelor">Bachelor's</option>
+                    <option value="Master">Master's</option>
+                    <option value="PhD">PhD</option>
+                    
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="job_title">Job Title:</label>
+                <select id="job_title" name="job_title" required>
+                    <!-- Options will be populated dynamically -->
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="experience">Experience (years):</label>
+                <input type="number" id="experience" name="experience" required>
+            </div>
+            <button type="submit" id="submit-btn">Predict</button>
+        </form>
+        <div id="loading" class="loading">Loading...</div>
+        <div id="result"></div>
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>
